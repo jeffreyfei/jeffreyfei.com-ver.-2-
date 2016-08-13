@@ -1,1 +1,1 @@
-angular.module('JeffreyHome', ['ngRoute', 'ngAnimate', 'ui.bootstrap']);
+angular.module('JeffreyHome', ['ngRoute', 'ngAnimate', 'mgcrea.ngStrap']);
