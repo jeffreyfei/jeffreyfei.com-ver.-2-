@@ -1,6 +1,3 @@
-a {
-    text-decoration: none;
-}
 a:hover {
     text-decoration: none;
 }
@@ -37,15 +34,11 @@ a:hover {
 }
 .custom-nav > ul > li > a {
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-    padding: 15px 20px 15px 20px;
     letter-spacing: 1.5px;
     font-weight: 900;
     font-size: 15px;
 }
 .custom-nav {
-    z-index: 999;
-    border-color: #a33f3e;
-    box-shadow: 0 1px 0 rgba(255, 255, 255, .1);
     padding: 0 15px 0 0;
 }
 .name {
@@ -78,21 +71,4 @@ a:hover {
 }
 a > .info-button {
     color: white;
-}
-.section-header {
-    font-size: 40px;
-    margin: 5px 0 10px 0;
-}
-.skills-progress {
-    margin-top: 4px;
-}
-.progress > .progress-bar {
-    background-color: #222;
-}
-.progress-header {
-    font-size: 20px;
-}
-.cat-header {
-    font-size: 27px;
-    margin-bottom: 10px;
 }

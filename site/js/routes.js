@@ -15,6 +15,9 @@ angular.module('JeffreyHome').config(function($routeProvider) {
             templateUrl: 'templates/pages/resources/index.html',
             controller: 'ResourceController'
         })
+        .when('/resume', {
+            templateUrl: 'templates/pages/resume/index.html'
+        })
         .otherwise({
             redirectTo: '/home'
         });

@@ -1,7 +1,10 @@
-<nav class="nav navbar-inverse custom-nav" data-spy="affix" data-offset-top="500" role="navigation" bs-affix bs-navbar>
+<nav ng-class="{'navbar-inverse' : isInvert, 'navbar-default' : !isInvert}" class="nav custom-nav" data-spy="affix" data-offset-top="500" role="navigation" bs-affix bs-navbar>
     <ul class="nav navbar-nav">
-        <li data-match-route="/home"><a href="#home">Home</a></li>
-        <li data-match-route="/projects"><a href="#projects">Projects</a></li>
-        <li data-match-route="/resources"><a href="#resources">Resources</a></li>
+        <li ng-click="makeInvert()" data-match-route="/home"><a href="#home">Home</a></li>
+        <li ng-click="makeInvert()" data-match-route="/projects"><a href="#projects">Projects</a></li>
+        <li ng-click="makeInvert()" data-match-route="/resources"><a href="#resources">Resources</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+        <li ng-click="makeNormal()" data-match-route="/resume"><a href="#resume">Resume</a></li>
     </ul>
 </nav>

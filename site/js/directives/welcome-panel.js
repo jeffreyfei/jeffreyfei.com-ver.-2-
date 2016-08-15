@@ -5,7 +5,7 @@ angular.module('JeffreyHome').directive('welcomePanel', function() {
         scope: {},
         link: function(scope, elements, attrs) {
             $(".description-text").typed({
-                strings: ['> ^500 Learner, ^1000 Builder, ^1000 Problem Solver'],
+                strings: ['> ^500 Designer, ^1000 Builder, ^1000 Problem Solver'],
                 typeSpeed: 0
             });
         }
