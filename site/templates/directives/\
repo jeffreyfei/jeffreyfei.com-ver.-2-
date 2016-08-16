@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="row">
+        <div class="section-header row">Experience</div>
+        <div class="cat-header row">
+            <div class="col-md-1"><i class="glyphicon glyphicon-chevron-down"></i>
+            <div class="col-md-10 col-md-offset-1"> 
+                Software Engineer Co-op | EMC
+            </div>
+        </div>
+    </div>
+</div>

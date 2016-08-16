@@ -1,0 +1,13 @@
+<div class="cat-header row">
+    <a class="clps-header" ng-click="toggleCollapse()"><i class="glyphicon glyphicon-chevron-{{iconClass}} clps-icon"></i>{{header}}</a>
+</div>
+    <div class="sub-header">{{subHeader}}</div>
+<hr><br>
+<div class="row" uib-collapse="isCollapsed">
+    <ul class="clps-list" ng-repeat="(header, list) in details">
+        <div class="clps-list-header">{{header}}</div>
+        <li ng-repeat="info in list"> {{info}} </li>
+        <br>
+    </ul>
+</div>
+<hr ng-show="!isCollapsed">
