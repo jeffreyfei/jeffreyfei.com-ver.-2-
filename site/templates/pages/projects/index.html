@@ -1,2 +1,33 @@
-projects
-
+<a id="top"></a>
+<div class="panel-container dark-container" align="center">
+    <div class="container">
+        <div class="row" align="center">
+            <a href="https://github.com/jeffreyfei" target="_blank">
+                <div class="info-button">
+                    <i class="fa fa-github-alt" aria-hidden="true"></i>
+                </div>
+            </a>
+            <a href="https://www.linkedin.com/in/jeffrey-fei-3a777a111?trk=hp-identity-name" target="_blank">
+                <div class="info-button">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </div>
+            </a>
+            <a href="mailto:jzffei@uwaterloo.ca">
+                <div class="info-button">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="panel-container light-container">
+    <div class="container">
+        <div ng-repeat="project in projects">
+            <project-info header="project.header" date="project.date" github-link="project.github" ext-link="project.link" desc="project.desc" tech="project.tech" members="project.members"></project-info> 
+            <hr ng-show="!$last" class="project-divider">
+        </div>
+    </div>
+</div>
+<div class="panel-container dark-container" align="center">
+    <a ng-click="gotoTop()" class="footer-link">Top</a> | <a href="#home" class="footer-link">Home</a> | <a href="#resources" class="footer-link">Resources</a>
+</div>

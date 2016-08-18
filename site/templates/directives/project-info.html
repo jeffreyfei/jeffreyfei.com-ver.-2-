@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col-md-5">
+        <div class="cat-header row">
+            {{header}}
+        </div>
+        <div class="header-date row">
+            {{date}}
+        </div>
+    </div>
+    <div class="col-md-2 col-md-offset-5">
+        <a ng-show="githubLink !== undefined" ng-href="{{githubLink}}" target="_blank">
+            <div class="info-button-invert" style="top:-5px" align="center">
+                <i class="fa fa-github github-button"></i>
+            </div>
+        </a>
+        <a ng-show="extLink !== undefined" ng-href="{{extLink}}" target="_blank">
+            <div class="info-button-invert" style="top:-5px" align="center"> 
+                <i class="fa fa-link link-button"></i>
+            </div>
+        </a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-10">
+        <p class="body-text" ng-repeat="line in desc">{{line}}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <collapsible-list ng-show="tech !== none" header="'Technologies'" items="tech"></collapsible-list>
+    </div>
+    <div class="col-md-6">
+        <collapsible-list ng-show="members !== none" header="'Team'" items="members"></collapsible-list>
+    </div>
+</div>

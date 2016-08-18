@@ -1,0 +1,8 @@
+<div class="sm-clps-header row">
+     <a class="clps-header" ng-click="toggleCollapse()"><i class="glyphicon glyphicon-chevron-{{iconClass}} clps-icon"></i>{{header}}</a>
+</div>
+<div class="row" uib-collapse="isCollapsed">
+    <ul class="sm-clps-list">
+        <li ng-repeat="item in items">{{item}}</li>
+    </ul>
+</div>

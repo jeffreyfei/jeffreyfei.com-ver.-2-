@@ -1,0 +1,16 @@
+<div class="cat-header row">
+    <div class="col-md-6">
+        <a class="clps-header" ng-click="toggleCollapse()"><i class="glyphicon glyphicon-chevron-{{iconClass}} clps-icon"></i>{{term}}</a>
+    </div>
+    <div class="col-md-6">
+        <uib-progressbar class="term-progress" animate="false" value="getPercent(startDate)">{{getText(startDate)}}</uib-progressbar>
+    </div>
+</div>
+<hr><br>
+<div class="row" uib-collapse="isCollapsed">
+    <ul class="clps-list-unstyled">
+        <li ng-repeat="course in courses">{{course}}</li>
+    </ul>
+</div>
+<br>
+<hr ng-show="!isCollapsed">

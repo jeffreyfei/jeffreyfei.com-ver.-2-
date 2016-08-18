@@ -29,9 +29,9 @@ angular.module('JeffreyHome').directive('experiencePanel', function() {
             };
             scope.adSysInfo = {
                 header: 'Full Stacks Development | Aerodrifting Systems',
-                subHeader: 'July 2016 - Present',
+                subHeader: 'July 2016 - Aug 2016',
                 details: {
-                    'AD Systems Retail Website' : [
+                    'Aerodriting Systems Online' : [
                         'Utilized AngularJS and AngularUI Bootstrap to build a customer-oriented retail interface that works in correlation with its ebay store to provide the guest with an improved shopping experience',
                         'Implemented customer review and purchase request system using a Node.js backend with a Redis database'
                     ]

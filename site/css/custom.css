@@ -14,9 +14,12 @@ a:hover {
     background-color: #222;
     color: white;
 }
-.light-containe {
+.light-container {
     background-color: white;
     color: #222;
+}
+.light-container hr{
+    border-top: 1px solid #222; 
 }
 /** Welcome Panel **/
 .welcome-panel {
@@ -57,13 +60,13 @@ a:hover {
 .occupation {
     font-size: 30px;
 }
-.info-button {
+.info-button, .info-button-invert {
     display: inline-block;
     margin: 5px 10px 5px 10px;
     height: 60px;
     width: 60px;
     font-size: 38px;
-    border: 1px solid;
+    border: 1.5px solid;
     border-radius: 60px;
     cursor: pointer;
     -webkit-transition: all 0.4s ease;
@@ -79,13 +82,36 @@ a:hover {
     -o-transition: all 0.4s ease;
     transition: all 0.4s ease;
 }
+.info-button-invert:hover {
+    background-color: #222;
+    color:white;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+a > .info-button-invert {
+    color: #222;
+}
 a > .info-button {
     color: white;
 }
+.book-button {
+    margin: 9px 0 0 11px;
+}
+.github-button {
+    margin: 5px 0 0 0;
+}
+.link-button {
+    margin: 10px 0 0 0;
+}
 /** Headers **/
+.page-header {
+    font-size: 50px;
+}
 .section-header {
     font-size: 40px;
-    margin: 5px 0 10px 0;
+    margin: 6px 0 10px 0;
 }
 .cat-header {
     font-size: 27px;
@@ -95,9 +121,16 @@ a > .info-button {
     margin-left: 26px;
     size: 14px;
 }
-/** Skills panel **/
+.proj-date {
+    size: 14px;
+    margin-bottom: 10px;
+}
+/** Progress Bars **/
 .skills-progress {
     margin-top: 4px;
+}
+.term-progress {
+    margin-top: 9px;
 }
 .progress > .progress-bar {
     background-color: #222;
@@ -129,4 +162,44 @@ a > .info-button {
 .clps-list-header {
     font-size: 20px;
     font-weight: bold;
+}
+.clps-list-unstyled {
+    list-style-type: none;
+    font-size: 22px;
+}
+.clps-list-unstyled > li {
+    margin-bottom: 10px;
+}
+.sm-clps-header {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+.sm-clps-list {
+    list-style-type: none;
+    font-size: 18px;
+}
+.sm-clps-list > li {
+    margin-bottom: 5px;
+}
+/** footer **/
+a.footer-link {
+    color: inherit;
+    font-size: 16px;
+}
+a.footer-link:hover {
+    color: inherit;
+    cursor: pointer;
+}
+a.footer-link:hover {
+    color: #787878;
+}
+
+.body-text {
+    font-size: 18px;
+    margin: 10px 0 20px 0;
+}
+
+hr.project-divider {
+    margin: 30px 0 30px 0;
 }

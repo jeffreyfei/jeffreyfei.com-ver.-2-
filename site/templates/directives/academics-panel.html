@@ -3,4 +3,15 @@
     <div class="cat-header row"><i class="fa fa-graduation-cap" aria-hidden"true"></i>
         Software Engineering | University of Waterloo | Class of 2020
     </div>
+    <br>
+    <term-progress ng-repeat="term in terms" term="term.header" start-date="term.start" courses="term.courses"></term-progress>
+    <div class="row">
+        <div class="col-md-offset-11 col-md-1">
+            <a href="#resources" uib-tooltip="Course Notes" tooltip-placement="bottom" tooltip-popup-delay="500">
+                <div class="info-button-invert">
+                    <i class="fa fa-book book-button"></i>
+                </div>
+            </a>
+        </div>
+    </div>
 </div>
