@@ -105,6 +105,10 @@ a > .info-button {
 .link-button {
     margin: 10px 0 0 0;
 }
+.chevron-button {
+    padding: 4px 0 0 0;
+    position: absolute;
+}
 /** Headers **/
 .page-header {
     font-size: 50px;
@@ -202,4 +206,39 @@ a.footer-link:hover {
 
 hr.project-divider {
     margin: 30px 0 30px 0;
+}
+/* btn-row */
+.btn-row {
+    color: #222;
+    border-color: #222;
+    background-color: white;
+}
+.btn-row.active, .btn-row:active {
+    background-color: #222;
+    color: white;
+    border-color: #222;
+}
+.btn-row.active.focus, .btn-row:active:focus {
+    background-color: #222;
+    color: white;
+    border-color: #222;
+}
+.btn-row:hover {
+    background-color: inherit;
+    color: inherit;
+    border-color: inherit;
+}
+.btn-row.active:hover {
+    background-color: #222;
+    color: white;
+    border-color: #222;
+}
+/* Content selector */
+.content-header {
+    font-size: 45px; 
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }

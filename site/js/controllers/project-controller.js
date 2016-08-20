@@ -1,9 +1,14 @@
-angular.module('JeffreyHome').controller('ProjectController', function($scope) {
+angular.module('JeffreyHome').controller('ProjectController', function($scope, $location, $anchorScroll) {
+    $scope.gotoTop = function() {
+        $location.hash('top');
+        $anchorScroll();
+    };
+
     $scope.projects = [{
             header: 'Aerodrifting Systems Online',
             date: 'July 2016 - Aug 2016',
             link: 'http://aerodriftingsystems.com/',
-            desc: ['ggggggg','mieeeee'],
+            desc: ['A.D. Systems online is a retail platform built for Aerodrifting Systems located in Los Angeles, California. It is designed to work in correlation with the A.D. System ebay store, advertise products, and collect user feedbacks.','The site comes in with its own review and purchase request systems, which allows customers to voice their concerns and provides them with the option to stay in touch with the store directly rather than through third-party platforms such as ebay.'],
             tech: ['AngularJS', 'AngularUI Bootstrap', 'Node.js', 'Redis']
         },{
             header: 'Wat-Product',
