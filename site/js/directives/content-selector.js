@@ -17,7 +17,7 @@ angular.module('JeffreyHome').directive('contentSelector', function() {
                 }
                 scope.currentContent = scope.contents[currentPage];
             };
-            scope.toogleLeft = function() {
+            scope.toggleLeft = function() {
                 if(currentPage === 0) {
                     currentPage = scope.contents.length - 1;
                 } else {
