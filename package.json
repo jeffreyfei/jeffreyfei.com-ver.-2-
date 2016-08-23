@@ -11,7 +11,9 @@
     "body-parser": "^1.15.2",
     "bootstrap": "^3.3.7",
     "express": "^4.14.0",
+    "express-fileupload": "0.0.5",
     "jquery": "^2.2.4",
+    "nodemailer": "^2.5.0",
     "redis": "^2.6.2"
   }
 }

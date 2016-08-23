@@ -6,4 +6,12 @@
     <div class="row" align="center">
         <btn-row active="currentSubject" btns="subjects"></btn-row>
     </div>
+    <div class="container">
+    <br><hr><br>
+    <uib-progressbar ng-show="loading" class="loading-progress progress-striped active" animate="true" value="100">Loading</uib-progressbar>
+        <note-brief ng-repeat="note in notes | filter: {page:currentPage}| orderBy : 'timestamp' : true" header="note.header" date="note.date"></note-brief>
+    </div>
+    <div class="row" align="center">
+        <ul uib-pagination total-items="noteNum" ng-show="noteNum > itemsPerPage" ng-model="currentPage" items-per-page="itemsPerPage" boundary-link-numbers"true" rotate="false"></ul>
+    </div>
 </div>

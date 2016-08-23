@@ -18,6 +18,10 @@ angular.module('JeffreyHome').config(function($routeProvider) {
         .when('/resume', {
             templateUrl: 'templates/pages/resume/index.html'
         })
+        .when('/resources/note/:note', {
+            templateUrl: 'templates/pages/note/index.html',
+            controller: 'NoteController'
+        })
         .otherwise({
             redirectTo: '/home'
         });

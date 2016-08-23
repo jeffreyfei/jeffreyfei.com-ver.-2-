@@ -7,7 +7,13 @@ angular.module('JeffreyHome').directive('contentSelector', function() {
             currentContent: '=' 
         },
         link: function(scope, elements, attrs) {
-            scope.currentContent = scope.contents[0];
+            scope.$watch('contents', function() {
+                if(scope.contents !== undefined) {
+                    scope.currentContent = scope.contents[0];
+                } else {
+                    scope.currentContent = '';
+                }
+            });
             var currentPage = 0;
             scope.toggleRight = function() {
                 if(currentPage + 1 === scope.contents.length) {

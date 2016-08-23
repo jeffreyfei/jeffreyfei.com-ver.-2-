@@ -12,6 +12,7 @@
     vertical-align: middle;
 }
 .name-wrapper {
+    margin-left: 28px;
     font-size: 70px;
 }
 .last-name {
@@ -19,7 +20,7 @@
     color: #BF0000;
 }
 .info-list {
-    font-size: 18px;
+    font-size: 16px;
     padding: 23px 5px 5px 5px;
     list-style: none;
 }
@@ -41,10 +42,17 @@
     -o-transition: all 0.2s ease;
     transition: all 0.2s ease;
 }
+.info-row {
+    margin-left: 10px;
+}
+.tech-col {
+    margin-left: 11px;
+}
 .tech-list > li {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 .info-list-header {
+    margin-top: 68px;
     font-weight: 700;
     font-size: 20px;
 }
@@ -71,4 +79,11 @@ div.right-col {
 .content-block {
     padding-left: 12px;
     border-left: 5px solid #909090;
+    margin-bottom: 8px;
+}
+.content-block:hover {
+    border-color: #222;
+}
+.class-row {
+    margin-left: 13px;
 }

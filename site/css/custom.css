@@ -133,6 +133,9 @@ a > .info-button {
 .skills-progress {
     margin-top: 4px;
 }
+.loading-progress {
+    margin: 30px 0 30px 0;
+}
 .term-progress {
     margin-top: 9px;
 }
@@ -241,4 +244,89 @@ hr.project-divider {
     -ms-user-select: none;
     -o-user-select: none;
     user-select: none;
+}
+/*Note brief*/
+.note-brief {
+    border-radius: 10px;
+    border: 2px solid #222;
+    width: 100%;
+    height: 80px;
+    color: #222;
+    padding: 5px 40px 0 40px;
+    cursor: pointer;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    margin-bottom: 20px;
+}
+.note-brief:hover{
+    border-color: #555555;
+    color: #555555;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+.note-brief-header {
+    font-size: 30px;
+}
+.note-brief-date {
+    font-size: 15px;
+}
+/* Pagination */
+.pagination > li > a {
+    color: #222;
+    border-color: #222;
+}
+.pagination > li.active > a {
+    background-color: #222;
+    color: white;
+}
+.pagination > li.active:hover > a {
+    background-color: #555555;
+    border-color: #555555;
+    cursor: pointer;
+}
+.pagination > li:hover > a {
+    border-color: #222;
+    color: #222;
+}
+.pagination > li.disabled > a {
+    border-color: #555555;
+    color: #555555;
+}
+.pagination > li.disabled:hover > a {
+    border-color: #555555;
+    color: #555555;
+}
+/* PDF pages */
+.pdf-display {
+    height: 800px;
+    border: 2px solid #222;
+}
+.pdf-container {
+    padding: 0 20px 20px 20px;
+}
+.pdf-header {
+    font-size: 40px;
+    margin: 0 0 20px 15px;
+}
+.pdf-btn-row {
+    position: absolute;
+    right: 20px;
+}
+.pdf-exit-btn {
+    position: absolute;
+    right 20px;
+}
+.comments-header {
+    font-size: 40px;
+}
+/* Modal */
+.review-modal {
+    padding: 20px 42px 20px 42px;
+}
+.comment-box {
+    min-height: 100px;
 }
