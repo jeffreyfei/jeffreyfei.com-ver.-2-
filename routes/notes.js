@@ -85,7 +85,7 @@ router.route('/terms')
             }
         });
     });
-router.route('/courses/:term')
+router.route('/courses/term/:term')
     .get(function(request, response) {
         redisClient.smembers(request.params.term+';;term;;', function(err, courses) {
             if(!err) {

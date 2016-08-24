@@ -23,13 +23,13 @@ angular.module('JeffreyHome').controller('ResourceController', function($scope, 
     };
     Notes.terms().then(function(response) {
         $scope.terms = response.data;
-        $scope.$emit('term-fetched', response.data[0]);
+        $scope.$emit('update-term', response.data[0]);
         
     }, function(response) {
         $scope.terms = [];
-        $window.alert('Connection Failed : ' + response);
+        $window.alert('Connection Failed : ' + response.data);
     });
-    $scope.$on('term-fetched', function(event, data) {
+    $scope.$on('update-term', function(event, data) {
         Notes.courses(data).then(function(response) {
             $scope.subjects = response.data;
             $scope.currentSubject = response.data[0];
@@ -37,7 +37,7 @@ angular.module('JeffreyHome').controller('ResourceController', function($scope, 
         }, function(response) {
             $scope.subjects = [];
             $scope.currentSubject = '';
-            $window.alert('Connection Failed : ' + response);
+            $window.alert('Connection Failed : ' + response.data);
         });
 
     });
@@ -48,10 +48,17 @@ angular.module('JeffreyHome').controller('ResourceController', function($scope, 
             $scope.loading = false;
         }, function(response) {
             $scope.notes = [];
-            $window.alert('Connection Failed : ' + response);
+            $window.alert('Connection Failed : ' + response.data);
         });
     });
     $scope.$watch('currentSubject', function() {
-        $scope.$emit('update-notes', $scope.currentSubject);
+        if($scope.currentSubject !== undefined && $scope.currentSubject !== '') {
+            $scope.$emit('update-notes', $scope.currentSubject);
+        }
+    });
+    $scope.$watch('currentTerm', function() {
+        if($scope.currentTerm !== undefined && $scope.currentTerm !== '') {
+            $scope.$emit('update-term', $scope.currentTerm);
+        }
     });
 });
