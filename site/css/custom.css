@@ -282,6 +282,7 @@ hr.project-divider {
 .pagination > li.active > a {
     background-color: #222;
     color: white;
+    border-color: #222;
 }
 .pagination > li.active:hover > a {
     background-color: #555555;
@@ -321,7 +322,10 @@ hr.project-divider {
     right 20px;
 }
 .comments-header {
-    font-size: 40px;
+    font-size: 40px; 
+    border-bottom: solid 4px #222;
+    width: 200px;
+    margin-bottom: 30px;
 }
 /* Modal */
 .review-modal {
@@ -329,4 +333,49 @@ hr.project-divider {
 }
 .comment-box {
     min-height: 100px;
+}
+.review-notification {
+    margin: 70px 0 70px 0;
+    font-size: 20px;
+}
+/* Review */
+.header-group {
+    font-size: 25px;
+}
+.review-header {
+    font-size: 25px;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 600px;
+    color: inherit;
+}
+.like-icon {
+    font-size: 25px;
+    margin-left: 20px;
+}
+.review-box {
+    padding: 10px 20px 10px 20px;
+    width: 700px;
+    border-bottom: solid 2px #222;
+    margin-bottom: 20px;
+}
+.review-date {
+    font-size: 15px;
+}
+.review-toggle-btn {
+    cursor: pointer;
+    padding-top: 10px;
+    font-size: 30px;
+}
+.comment-body {
+    font-size: 18px;
+}
+.no-comment-text {
+    font-size: 25px;
+}
+
+.verify-text {
+    vertical-align: middle;
+    font-size: 40px;
 }

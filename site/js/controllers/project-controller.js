@@ -1,9 +1,4 @@
 angular.module('JeffreyHome').controller('ProjectController', function($scope, $location, $anchorScroll) {
-    $scope.gotoTop = function() {
-        $location.hash('top');
-        $anchorScroll();
-    };
-
     $scope.projects = [{
             header: 'Aerodrifting Systems Online',
             date: 'July 2016 - Aug 2016',

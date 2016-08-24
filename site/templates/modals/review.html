@@ -8,7 +8,12 @@
         <button type="button" ng-click="unlike()" ng-class="{active:newReview.like === false}" class="btn btn-default"><i class="fa fa-thumbs-down"></i></button>
     </div>
     <br>
-        <div class="row">
+        <div class="row review-notification" ng-show="contentHide" align="center">
+            <div class="col-md-12">
+                {{msg}}
+            </div>
+        </div>
+        <div class="row" ng-show="!contentHide">
             <form name="reviewForm" role="form">
                 <div class="row">
                     <div class="form-group col-md-12">
@@ -22,7 +27,7 @@
                         <input type="text" ng-model="newReview.name" class="form-control" id="nameInput" required>
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="email">E-Mail:</label>
+                        <label for="email">UWaterloo E-Mail:</label>
                         <input type="email" ng-model="newReview.email" class="form-control" id="emailInput" required>
                     </div>
                 </div>
@@ -36,5 +41,5 @@
         </div>
 </div>
 <div class="modal-footer">
-    <button type="button" ng-class="{disabled: !reviewForm.$valid}" class="btn btn-default">Submit</button>
+    <button ng-show="!submitHide" type="button" ng-class="{disabled: !reviewForm.$valid}" ng-click="reviewForm.$valid && postReview()" class="btn btn-default">Submit</button>
 </div>

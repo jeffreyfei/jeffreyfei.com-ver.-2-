@@ -22,6 +22,10 @@ angular.module('JeffreyHome').config(function($routeProvider) {
             templateUrl: 'templates/pages/note/index.html',
             controller: 'NoteController'
         })
+        .when('/verify/:id', {
+            templateUrl: 'templates/pages/verify/index.html',
+            controller: 'VerifyController'
+        })
         .otherwise({
             redirectTo: '/home'
         });

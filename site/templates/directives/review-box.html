@@ -1,0 +1,19 @@
+<div class="review-box" align="left">
+    <div class="row">
+        <div class="col-md-8 col-sm-8">
+            <div class="review-header row">
+                <i class="fa" ng-class="{'fa-thumbs-up':like, 'fa-thumbs-down':!like}" ng-show="like !== undefined">&nbsp;</i>{{header}}
+            </div>
+            <div class="review-date row">
+                {{name}}&nbsp;-&nbsp;{{date}}
+            </div>
+        </div>
+        <div class="review-toggle-btn" align="right"  ng-click="toggleCollapse()">
+            <i class="glyphicon glyphicon-chevron-{{iconClass}}"></i>
+        </div>
+    </div>
+    <div class="comment-body row" uib-collapse="isCollapsed">
+        <br>
+        {{comment}}
+    </div>
+</div>

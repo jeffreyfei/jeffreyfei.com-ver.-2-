@@ -1,10 +1,17 @@
-angular.module('JeffreyHome').controller('NoteController', function($scope, $window, $routeParams, $uibModal, Notes) {
+angular.module('JeffreyHome').controller('NoteController', function($scope, $window, $routeParams, $uibModal, Notes, Review) {
     // Get note information
     Notes.note($routeParams.note).then(function(response) {
         $scope.note = response.data;
     }, function(response) {
         $scope.note = {};
-        $window.alert('Connection failed : ' + response.data);
+        $window.alert('Error : ' + response.data);
+    });
+    // Get comments
+    Review.get($routeParams.note).then(function(response) {
+        $scope.reviews = response.data;
+    }, function(response) {
+        $scope.reviews = [];
+        $window.alert('Error : ' + response.data);
     });
     // Open review modal
     $scope.openReview = function() {

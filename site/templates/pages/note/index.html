@@ -2,7 +2,7 @@
     <div class="pdf-header">
         <a href="#resources">
             <div class="info-button" align="center">
-                <i style="margin-top:5px" class="fa fa-undo"></i>
+                <i style="margin-top:5px" class="fa fa-arrow-left"></i>
             </div>
         </a>
         {{note.header}}
@@ -28,9 +28,15 @@
 </div>
 <div class="panel-container light-container">
     <div class="container">
-        <div class="comments-header row" align="center">
-            Comments
-            <hr>
+        <div class="row" align="center">
+            <div class="comments-header">
+                Comments
+            </div>
+        </div>
+        <div class="container" align="center">
+            <div ng-show="reviews.length === 0" class="no-comment-text">No comment...</div>
+            <review-box ng-repeat="review in reviews | orderBy: 'timestamp': true" header="review.title" date="review.date" name="review.name" comment="review.comments" like="review.like"></review-box>
         </div>
     </div>
 </div>
+<page-footer links="['Home', 'Resources']"></page-footer>
