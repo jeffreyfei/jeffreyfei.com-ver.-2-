@@ -10,6 +10,7 @@ app.use(express.static('./site'));
 app.use('/noteSvc', notes);
 app.use('/review', review);
 app.use('/notes', express.static(path.join(__dirname, 'notes')));
+app.use('/public', express.static(path.join(__dirname, 'public')));
 
 app.listen(port, function() {
     console.log("Server running on port " + port);
