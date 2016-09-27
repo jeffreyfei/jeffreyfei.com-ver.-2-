@@ -7,7 +7,7 @@ var jsonParser = bodyParser.json({ type: 'application/json' });
 var fs = require('fs');
 // Credential file
 var cred = JSON.parse(fs.readFileSync('cred.json', 'utf8'));
-var domain = 'http://localhost:8080/';
+var domain = 'http://jeffreyfei.com/';
 
 var nodemailer = require('nodemailer');
 var smtpConfig = {
