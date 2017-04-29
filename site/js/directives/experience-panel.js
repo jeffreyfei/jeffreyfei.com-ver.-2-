@@ -37,6 +37,19 @@ angular.module('JeffreyHome').directive('experiencePanel', function() {
                     ]
                 }
             }
+            scope.smartInfo = {
+                header: 'Software Developer Intern | SMART Technologies',
+                subHeader: 'Jan 2017 - Apr 2017',
+                details: {
+                    '': [
+                        "Designed SMART LAB's web migration and integrationto SMART Learning Suite online which allows user to create LAB activities in a browser",
+                        "Implemented new login flow in Vue.js control premium feature access based on the user's subscription status",
+                        "Created LAB Player API that enables external audio control in SMART Lessons",
+                        "Improved dialogue system in LAB Player by adding activity type detection in the LAB-C backend to display the current running activity and status",
+                        "Assisted with LAB Creation Wizard's Vue 2.0 migration from Vue 1.0"
+                    ]
+                }
+            }
         }
     };
 });

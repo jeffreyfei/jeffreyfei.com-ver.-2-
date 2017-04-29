@@ -35,6 +35,17 @@ angular.module('JeffreyHome').directive('academicsPanel', function() {
                     'CHE 102 | Chemistry for Engineers',
                     'SPCOM 223 | Public Speaking'
                 ]
+            },{
+                header: 'Second year | Term B',
+                start: '2017-05',
+                courses: [
+                    'CS 240 | Data structures & Data management',
+                    'CS 247 | Software Engineering Principles',
+                    'MATH 213 | Advanced Math for Software Engineering',
+                    'MATH 239 | Intro to Combinatorics',
+                    'MSCI 261 | Financial Management for Engineers',
+                    'SCI 238 | Introductory Astronomy'
+                ]
             }];
         }
     };
