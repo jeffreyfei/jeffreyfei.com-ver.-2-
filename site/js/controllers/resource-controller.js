@@ -1,5 +1,12 @@
-angular.module('JeffreyHome').controller('ResourceController', function($scope, $window, Notes) {
-    $scope.currentPage = 1;
+angular.module('JeffreyHome').controller('ResourceController', function($scope, $window, Notes, States) {
+    $scope.currentState = States.currentState();
+    if($scope.currentState.currentPage === {}) {
+        $scope.currentPage = 1;
+    } else {
+        $scope.currentPage = $scope.currentState.currentPage;
+        $scope.currentSubject = $scope.currentState.currentSubject;
+        $scope.currentTerm = $scope.currentState.currentTerm;
+    }
     $scope.itemsPerPage = 15;
     $scope.loading = true;
     var paginate = function(data) {
@@ -60,5 +67,8 @@ angular.module('JeffreyHome').controller('ResourceController', function($scope, 
         if($scope.currentTerm !== undefined && $scope.currentTerm !== '') {
             $scope.$emit('update-term', $scope.currentTerm);
         }
+    });
+    $scope.$watch('currentPage', function() {
+        currentState.currentPage = $        
     });
 });

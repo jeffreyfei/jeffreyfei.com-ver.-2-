@@ -9,7 +9,9 @@ angular.module('JeffreyHome').directive('contentSelector', function() {
         link: function(scope, elements, attrs) {
             scope.$watch('contents', function() {
                 if(scope.contents !== undefined) {
-                    scope.currentContent = scope.contents[0];
+                    if(scope.currentContent === undefined) {
+                        scope.currentContent = scope.contents[0];
+                    }
                 } else {
                     scope.currentContent = '';
                 }
