@@ -1,11 +1,20 @@
 angular.module('JeffreyHome').controller('ProjectController', function($scope, $location, $anchorScroll) {
     $scope.projects = [{
             header: 'Aerodrifting Systems Online',
-            date: 'July 2016 - Aug 2016',
+            date: 'Jan 2017 - Present',
             link: 'http://aerodriftingsystems.com/',
-            desc: ['A.D. Systems online is a retail platform built for Aerodrifting Systems located in Los Angeles, California. It is designed to work in correlation with the A.D. System ebay store, advertise products, and collect user feedbacks.','The site comes in with its own review and purchase request systems, which allows customers to voice their concerns and provides them with the option to stay in touch with the store directly rather than through third-party platforms such as ebay.'],
-            tech: ['AngularJS', 'AngularUI Bootstrap', 'Node.js', 'Redis']
-        },{
+            desc: ['A fullstacks eCommerce solution designed for Aerodrifting Systems, which is a retailer specialized in custom built PCs based in Los Angeles, California.','Users are given the option to either purchase from existing templates within the store, or build their own custom PCs using the builder functionality of the site. The site allows users to sign in with their Google account and has a user-associated payment system powered by Paypal, which allows users to keep track of their orders and communicate with the store owner with ease.'],
+            tech: ['Vue.js', 'Node.js', 'Redis', 'Google OAuth2', 'Paypal API']
+        },
+        {
+            header: 'Game of Green',
+            date: 'Jan 2017 (SMART Intern Hackthon)',
+            github: 'https://github.com/andrewmcewen/2017winter-intern-project',
+            desc: ['An online educational game intended to teach young students about basic concepts of environmental science, such as the preservation of natural resources', 'The game keeps track of data such as the student\'s daily energy consumption and water usage to create an record of an individual\'s environmental footprint. Each student represents a fictional city within the game, and the visual effects of the environment changes according to the students performance.'],
+            tech: ['Vue.js', 'Node.js', 'PostgreSQL'],
+            members: ['Andrew McEwen', 'Daren Wang', 'Ryan Liu', 'Ken Zhang', 'Kai Rusch', 'Anoop Dhaliwal', 'Pushpak Kumar', 'Kamil Zielinski', 'Max Webber', 'Jerusha Chua', 'Richard Wan']
+        },
+        {
             header: 'Wat-Product',
             date: 'Jan 2016 - Feb 2016',
             github: 'https://github.com/ian952/Watson-Challenge',

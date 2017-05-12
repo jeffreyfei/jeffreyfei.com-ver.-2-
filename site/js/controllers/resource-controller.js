@@ -1,9 +1,14 @@
 angular.module('JeffreyHome').controller('ResourceController', function($scope, $window, Notes) {
+    const seasonOrder = {
+        'Winter': 0,
+        'Spring': 1,
+        'Fall': 2
+    };
     $scope.currentPage = 1;
     $scope.itemsPerPage = 15;
     $scope.loading = true;
-    var paginate = function(data) {
-        var compare = function(a, b) {
+    function paginate(data){
+        let compare = function(a, b) {
             if(a.timestamp > b.timestamp) {
                 return -1;
             }
@@ -13,7 +18,7 @@ angular.module('JeffreyHome').controller('ResourceController', function($scope, 
             return 0;
         };
         data.sort(compare);
-        for(var i = 0, page = 0; i < data.length; i++) {
+        for(let i = 0, page = 0; i < data.length; i++) {
             if(i%15 === 0) {
                 page++;
             }
@@ -21,10 +26,22 @@ angular.module('JeffreyHome').controller('ResourceController', function($scope, 
         }
         return data;
     };
+    function sortTerm(terms){
+        return terms.sort(function(term1, term2) {
+            let term1Arr = term1.split(' ');
+            let term2Arr = term2.split(' ');
+            if (parseInt(term1Arr[1]) > parseInt(term2Arr[1])) {
+                return -1;
+            } else if (parseInt(term1Arr[1]) < parseInt(term2Arr[1])) {
+                return 1;
+            } else {
+                return seasonOrder[term2Arr[0]] - seasonOrder[term1Arr[0]];
+            }
+        });
+    };
     Notes.terms().then(function(response) {
-        $scope.terms = response.data;
-        $scope.$emit('update-term', response.data[0]);
-        
+        $scope.terms = sortTerm(response.data);
+        $scope.$emit('update-term', response.data[0]);        
     }, function(response) {
         $scope.terms = [];
         $window.alert('Connection Failed : ' + response.data);
