@@ -1,0 +1,11 @@
+{
+	"apps":{
+		"name":"jeffreyfei-host",
+		"script":"./server.js",
+		"watch": true,
+		"ignore_watch":["node_modules",".git","notes"],
+		"watch_options":{
+			"followSymlinks":false
+		}
+	}
+}
