@@ -1,11 +1,15 @@
+.resume-container {
+    text-align: center;
+}
 .resume-body {
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
     padding: 20px 50px 10px 50px;
     color: black;
     background-color: white;
+    display: inline-block;
+    margin-top: 20px;
 }
 .resume-img {
-    margin: 20px 20px 0 0;
     width: 100%;
 }
 .institution-info {
