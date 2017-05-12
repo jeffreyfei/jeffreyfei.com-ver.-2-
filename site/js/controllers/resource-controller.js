@@ -48,7 +48,7 @@ angular.module('JeffreyHome').controller('ResourceController', function($scope, 
     });
     $scope.$on('update-term', function(event, data) {
         Notes.courses(data).then(function(response) {
-            $scope.subjects = response.data;
+            $scope.subjects = response.data.sort();
             $scope.currentSubject = response.data[0];
             $scope.$emit('update-notes', response.data[0]);
         }, function(response) {
