@@ -1,5 +1,20 @@
 angular.module('JeffreyHome').controller('ProjectController', function($scope, $location, $anchorScroll) {
     $scope.projects = [{
+            header: 'Share My Notes',
+            date: 'Nov 2017 - Present',
+            github: 'https://github.com/jeffreyfei/share-my-notes',
+            desc: ['Created a horizontally scalable note sharing service in Go', 'Designed and developed load balancing strategy based on real time server status that allows requests to be diverted to servers with less pending jobs', 'Implemented job buffer for provider server which mitigates performance drops when processing large amounts of client requests'],
+            tech: ['Go']
+        },
+        {
+            header: 'Kontex',
+            date: 'Nov 2017 - Present',
+            github: 'https://github.com/jeffreyfei/kontex',
+            desc: ['Implemented automatic feature extractions on sentences such as sentence to title similarity and sentence to sentence cohesion', 'Utilized the extracted sentence features and scikit-learn’s Naïve Baye’s classifier to train a predictive Machine Learning model'],
+            tech: ['Python', 'scikit-learn'],
+            members: ['William Lo']
+        },
+        {
             header: 'Aerodrifting Systems Online',
             date: 'Jan 2017 - Present',
             link: 'http://aerodriftingsystems.com/',

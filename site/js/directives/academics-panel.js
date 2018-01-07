@@ -46,6 +46,16 @@ angular.module('JeffreyHome').directive('academicsPanel', function() {
                     'MSCI 261 | Financial Management for Engineers',
                     'SCI 238 | Introductory Astronomy'
                 ]
+            },{
+                header: 'Third year | Term A',
+                start: '2018-01',
+                courses: [
+                    'CS 341 | Algorithms',
+                    'SE 350 | Operating Systems',
+                    'SE 465 | Software Test & Quality Assurance',
+                    'CS 349 | User Interfaces',
+                    'ECON 101 | Intro to Microeconomics'
+                ]
             }];
         }
     };

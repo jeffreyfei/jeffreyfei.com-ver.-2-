@@ -50,6 +50,18 @@ angular.module('JeffreyHome').directive('experiencePanel', function() {
                     ]
                 }
             }
+            scope.shopInfo = {
+                header: 'Developer Intern | Shopify',
+                subHeader: 'Sep 2017 - Jan 2018',
+                details: {
+                    '': [
+                        "Implemented endpoints for a real time event processing service in Go to manage event multiplexing between Shopify Plus Launchpad enabled shops",
+                        "Refactored event multiplexer which reduced duplicating customer order events relayed to the clients by over 60%",
+                        "Prototyped scalable webhooks handler in Rails for Shopify’s future product content management application",
+                        "Designed analytics schema to determine merchant pricing strategy for product content management automation"
+                    ]
+                }
+            }
         }
     };
 });

@@ -9,7 +9,7 @@ angular.module('JeffreyHome').directive('customProgress', function() {
         link: function(scope, elements, attrs) {
             scope.getPercent = function(date) {
                 var currTime = new Date().getTime();
-                var maxLength = 31556952000;
+                var maxLength = 31556952000 * 3;
                 var currLength = currTime - Date.parse(date);
                 if(currLength >= maxLength) {
                     return 80;
